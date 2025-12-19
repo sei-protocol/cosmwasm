@@ -8,6 +8,8 @@ and this project adheres to
 
 ## [Unreleased]
 
+## [1.5.12] - 2025-12-19
+
 ## Fixed
 
 - cosmwasm-vm: Fixed gas scaling for backported patches
@@ -725,7 +727,8 @@ The CHANGELOG for versions before 1.0.0 was moved to
 
 <!-- next-url -->
 
-[unreleased]: https://github.com/CosmWasm/cosmwasm/compare/v1.5.11...HEAD
+[unreleased]: https://github.com/CosmWasm/cosmwasm/compare/v1.5.12...HEAD
+[1.5.12]: https://github.com/CosmWasm/cosmwasm/compare/v1.5.11...v1.5.12
 [1.5.11]: https://github.com/CosmWasm/cosmwasm/compare/v1.5.10...v1.5.11
 [1.5.10]: https://github.com/CosmWasm/cosmwasm/compare/v1.5.9...v1.5.10
 [1.5.9]: https://github.com/CosmWasm/cosmwasm/compare/v1.5.8...v1.5.9
