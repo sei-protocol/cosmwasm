@@ -65,19 +65,20 @@ impl Default for GasConfig {
             // From https://docs.rs/ed25519-zebra/2.2.0/ed25519_zebra/batch/index.html
             ed25519_batch_verify_cost: 63 * GAS_PER_US / 2,
             ed25519_batch_verify_one_pubkey_cost: 63 * GAS_PER_US / 4,
+            // necessary to scale fixed costs by 1000 since we are backporting from a version that had scaled down all gas values by 1000
             read_region_small_cost: LinearGasCost {
-                base: 200000,
-                per_item: 115,
+                base: 200000 * 1000,
+                per_item: 115 * 1000,
             },
             read_region_large_cost: LinearGasCost {
                 base: 0,
-                per_item: 520,
+                per_item: 520 * 1000,
             },
             string_from_bytes_cost: LinearGasCost {
-                base: 28700,
-                per_item: 1400,
+                base: 28700 * 1000,
+                per_item: 1400 * 1000,
             },
-            host_call_cost: 18000,
+            host_call_cost: 18000 * 1000,
         }
     }
 }
