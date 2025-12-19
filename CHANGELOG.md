@@ -8,6 +8,10 @@ and this project adheres to
 
 ## [Unreleased]
 
+## Fixed
+
+- cosmwasm-vm: Fixed gas scaling for backported patches
+
 ## [1.5.11] - 2025-03-05
 
 ## Fixed
