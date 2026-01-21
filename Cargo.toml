@@ -13,3 +13,6 @@ version = "1.5.12"
 shared-version = true
 tag-message = "chore: Release cosmwasm v{{version}}"
 tag-name = "v{{version}}"
+
+[patch.crates-io]
+wasmparser = { git = "https://github.com/sei-protocol/wasm-tools", rev = "wasmparser-0.95.1" }
