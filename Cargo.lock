@@ -2568,7 +2568,7 @@ dependencies = [
 [[package]]
 name = "wasmparser"
 version = "0.95.0"
-source = "git+https://github.com/sei-protocol/wasm-tools?branch=masih%2Freftype-fix#9f74d91e81ab959f9475955f3fbb2e305a32a9d4"
+source = "git+https://github.com/sei-protocol/wasm-tools?rev=wasmparser-0.95.1#97f347ace2c3747ed57b7d00e532d85a73282893"
 dependencies = [
  "indexmap",
  "url",
