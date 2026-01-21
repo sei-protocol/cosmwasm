@@ -2568,8 +2568,7 @@ dependencies = [
 [[package]]
 name = "wasmparser"
 version = "0.95.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f2ea896273ea99b15132414be1da01ab0d8836415083298ecaffbe308eaac87a"
+source = "git+https://github.com/sei-protocol/wasm-tools?branch=masih%2Freftype-fix#9f74d91e81ab959f9475955f3fbb2e305a32a9d4"
 dependencies = [
  "indexmap",
  "url",
