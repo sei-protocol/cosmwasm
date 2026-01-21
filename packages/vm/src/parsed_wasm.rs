@@ -28,8 +28,19 @@ impl<'a> ParsedWasm<'a> {
             sign_extension: true,
             multi_value: true,
             deterministic_only: true,
-
-            reference_types: false,
+            // IMPORTANT: reference_types must be enabled at the PARSING layer for Rust 1.82+ compatibility.
+            //
+            // Rust 1.82+ emits call_indirect with a multi-byte LEB128 table index (e.g., 0x80 0x00)
+            // instead of the single-byte 0x00 required by MVP. Both encode table index 0, but
+            // wasmparser ≥0.95 rejects multi-byte encodings when reference_types is disabled.
+            //
+            // This is a BINARY ENCODING issue, not a feature usage issue - contracts compiled with
+            // Rust 1.82+ will fail validation even if they use zero reference-types features.
+            //
+            // Security: Enabling reference_types here only affects parsing/validation. Dangerous
+            // instructions (table.grow, table.fill, etc.) are blocked separately by the Gatekeeper
+            // middleware which runs after parsing.
+            reference_types: true,
             bulk_memory: false,
             simd: false,
             relaxed_simd: false,
