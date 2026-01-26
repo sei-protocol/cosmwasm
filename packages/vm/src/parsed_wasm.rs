@@ -29,7 +29,7 @@ impl<'a> ParsedWasm<'a> {
             multi_value: true,
             deterministic_only: true,
 
-            reference_types: false,
+            reference_types: true,
             bulk_memory: false,
             simd: false,
             relaxed_simd: false,
